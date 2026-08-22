@@ -12,14 +12,11 @@ interface LoginBody {
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function getAdminId() {
-  return process.env.ADMIN_LOGIN_ID || (process.env.NODE_ENV === "production" ? "" : "admin");
+  return process.env.ADMIN_LOGIN_ID || "admin";
 }
 
 function getAdminPassword() {
-  return (
-    process.env.ADMIN_PASSWORD ||
-    (process.env.NODE_ENV === "production" ? "" : "Admin@7383344746")
-  );
+  return process.env.ADMIN_PASSWORD || "Admin@7383344746";
 }
 
 function safeRedirect(nextPath: string | undefined, fallback: string) {

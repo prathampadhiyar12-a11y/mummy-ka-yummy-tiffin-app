@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { siteConfig } from "@/lib/content";
 
 export function FloatingSocials() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <div className="fixed bottom-6 right-6 z-50 hidden flex-col gap-4 md:flex">
       {/* Instagram Button */}
       {siteConfig.instagramUrl && (
         <a

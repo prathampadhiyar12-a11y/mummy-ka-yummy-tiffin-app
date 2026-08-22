@@ -41,10 +41,11 @@ export function HeroSection() {
           muted
           loop
           playsInline
+          src={siteConfig.heroVideoUrl}
           poster={siteConfig.heroPosterUrl}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
         >
-          <source src={siteConfig.heroVideoUrl} />
+          <source src={siteConfig.heroVideoUrl} type="video/mp4" />
         </video>
       ) : (
         <>
@@ -56,10 +57,9 @@ export function HeroSection() {
             sizes="100vw"
             className="object-cover"
           />
-          <AnimatedKitchenOverlay />
         </>
       )}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(32,28,24,0.88),rgba(32,28,24,0.48),rgba(32,28,24,0.18))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(32,28,24,0.65),rgba(32,28,24,0.30),rgba(32,28,24,0.10))]" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(0deg,#fffaf2,transparent)]" />
 
       <div className="relative mx-auto flex min-h-[calc(100svh-80px)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
@@ -86,45 +86,12 @@ export function HeroSection() {
           </FadeIn>
         </div>
 
-        <div className="absolute bottom-10 right-6 hidden w-72 rounded-lg border border-white/18 bg-white/12 p-5 text-white backdrop-blur-xl lg:block">
-          <div className="relative h-16">
-            <span className="steam-line absolute left-5 top-8 h-12 w-6 rounded-full border-l border-white/45" />
-            <span className="steam-line absolute left-12 top-7 h-12 w-6 rounded-full border-l border-white/45" />
-            <span className="steam-line absolute left-20 top-8 h-12 w-6 rounded-full border-l border-white/45" />
-          </div>
-          <p className="text-sm font-semibold">Daily comfort count</p>
-          <p className="mt-2 text-3xl font-bold">128 meals</p>
-          <p className="mt-1 text-xs text-white/70">Prepared for Vadodara subscribers.</p>
-        </div>
+
       </div>
     </section>
   );
 }
 
-function AnimatedKitchenOverlay() {
-  return (
-    <div className="kitchen-animation pointer-events-none absolute inset-y-0 right-0 hidden w-[48%] lg:block" aria-hidden="true">
-      <div className="kitchen-shelf">
-        <span />
-        <span />
-        <span />
-      </div>
-      <div className="kitchen-pan">
-        <span className="kitchen-flame" />
-        <span className="kitchen-flame delay" />
-        <span className="kitchen-roti one" />
-        <span className="kitchen-roti two" />
-        <span className="kitchen-roti three" />
-      </div>
-      <div className="kitchen-pot">
-        <span className="steam-line" />
-        <span className="steam-line" />
-        <span className="steam-line" />
-      </div>
-      <div className="kitchen-counter" />
-    </div>
-  );
-}
 
 export function WeeklyMenuPreview() {
   return (
@@ -301,11 +268,18 @@ export function JourneySection() {
             homemade meals that reach your doorstep with consistency and care.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {["Home", "Love", "Trust"].map((value) => (
-              <div key={value} className="rounded-lg border border-white/12 bg-white/8 p-4">
-                <p className="text-2xl font-bold">{value}</p>
-              </div>
-            ))}
+            <div className="rounded-lg border border-white/12 bg-white/8 p-4">
+              <p className="text-3xl font-bold text-[#e9682c]">1000+</p>
+              <p className="mt-1 text-sm font-medium text-white/80">Happy Deliveries</p>
+            </div>
+            <div className="rounded-lg border border-white/12 bg-white/8 p-4">
+              <p className="text-3xl font-bold text-[#e9682c]">4.7 ★</p>
+              <p className="mt-1 text-sm font-medium text-white/80">Rating on Google Map</p>
+            </div>
+            <div className="rounded-lg border border-white/12 bg-white/8 p-4">
+              <p className="text-3xl font-bold text-[#e9682c]">2+ Years</p>
+              <p className="mt-1 text-sm font-medium text-white/80">Of Experience</p>
+            </div>
           </div>
         </FadeIn>
       </div>

@@ -4,7 +4,6 @@ import "./globals.css";
 import { LocalBusinessJsonLd } from "@/components/seo/local-business-json-ld";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { TopMarquee } from "@/components/site/top-marquee";
 import { FloatingSocials } from "@/components/site/floating-socials";
 import { seoKeywords, siteConfig } from "@/lib/content";
 
@@ -71,7 +70,6 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-background text-foreground">
         <LocalBusinessJsonLd />
-        <TopMarquee />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

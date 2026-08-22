@@ -170,6 +170,10 @@ export function ChooseMealExperience() {
   }
 
   function continueOnWhatsApp() {
+    if (!customerName.trim() || !phone.trim() || !address.trim()) {
+      alert("Please provide your Name, Phone, and Address before continuing.");
+      return;
+    }
     const orderId = generateOrderId();
     const platterNote = selectedPlatter
       ? `${selectedPlatter.name} Option ${platterOptionIndex + 1}: ${selectedPlatterItems.join(", ")}`

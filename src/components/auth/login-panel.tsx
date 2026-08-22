@@ -66,7 +66,7 @@ export function LoginPanel({ initialRole = "customer" }: { initialRole?: Role })
                 setRole(item.id as Role);
                 setError("");
               }}
-              className={`flex min-h-11 items-center justify-center gap-2 rounded-md px-3 text-sm font-bold transition ${
+              className={`relative z-10 flex min-h-11 items-center justify-center gap-2 rounded-md px-3 text-sm font-bold transition ${
                 role === item.id ? "bg-white text-[#201c18] shadow-sm" : "text-[#71675d]"
               }`}
             >
@@ -135,8 +135,9 @@ export function LoginPanel({ initialRole = "customer" }: { initialRole?: Role })
       </form>
 
       <div className="mt-5 rounded-lg border border-[#ead8bd] bg-[#fffaf2] p-4 text-sm leading-7 text-[#71675d]">
-        Customer login uses email. Admin access is protected with ID and password through a
-        signed HTTP-only session cookie.
+        <p className="font-semibold text-[#8a3b18]">🔑 Default Admin Credentials:</p>
+        <p><strong>Admin ID:</strong> <code className="bg-[#fff4df] px-1.5 py-0.5 rounded text-[#201c18]">admin</code></p>
+        <p><strong>Password:</strong> <code className="bg-[#fff4df] px-1.5 py-0.5 rounded text-[#201c18]">Admin@7383344746</code></p>
       </div>
     </Card>
   );

@@ -25,7 +25,7 @@ export const siteConfig = {
   whatsappNumber: "917383344746",
   email: "mummykayummytiffin@gmail.com",
   address: "Shree Sakti Society, A/7, Vasna Rd, Saiyed Vasna, Vadodara, Gujarat 390007",
-  mapUrl: "https://maps.app.goo.gl/oJRwBekUh7zMVXY7A",
+  mapUrl: "https://maps.app.goo.gl/TcX5qrKPHRHMzqaK9",
   instagramUrl:
     "https://www.instagram.com/mummy_ka_yummy_tiffin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   facebookUrl: "",

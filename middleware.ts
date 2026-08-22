@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifySessionToken } from "@/lib/auth-session";
+import { verifySessionToken } from "./src/lib/auth-session";
 
 const protectedAdminPrefix = "/admin";
 const protectedCustomerPaths = ["/dashboard"];
