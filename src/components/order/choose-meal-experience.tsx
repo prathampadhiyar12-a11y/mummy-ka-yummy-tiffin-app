@@ -309,6 +309,8 @@ export function ChooseMealExperience() {
               <label className="grid gap-2 text-sm font-semibold text-[#3f372f]">
                 Subscription
                 <Select
+                  id="subscription"
+                  name="subscription"
                   value={planId}
                   onChange={(event) => setPlanId(event.target.value as SubscriptionId)}
                 >
@@ -344,6 +346,8 @@ export function ChooseMealExperience() {
               <label className="grid gap-2 text-sm font-semibold text-[#3f372f]">
                 Distance from kitchen in km
                 <Input
+                  id="distance"
+                  name="distance"
                   min={0}
                   step={0.5}
                   type="number"
@@ -382,26 +386,36 @@ export function ChooseMealExperience() {
 
             <div className="mt-5 grid gap-3">
               <Input
+                id="customerName"
+                name="customerName"
                 placeholder="Name"
                 value={customerName}
                 onChange={(event) => setCustomerName(event.target.value)}
               />
               <Input
+                id="phone"
+                name="phone"
                 placeholder="Phone"
                 value={phone}
                 onChange={(event) => setPhone(event.target.value)}
               />
               <Input
+                id="startDate"
+                name="startDate"
                 type="date"
                 value={startDate}
                 onChange={(event) => setStartDate(event.target.value)}
               />
               <Textarea
+                id="address"
+                name="address"
                 placeholder="Address"
                 value={address}
                 onChange={(event) => setAddress(event.target.value)}
               />
               <Textarea
+                id="specialInstructions"
+                name="specialInstructions"
                 placeholder="Special instructions"
                 value={specialInstructions}
                 onChange={(event) => setSpecialInstructions(event.target.value)}
@@ -457,6 +471,8 @@ function PlatterConfigurator({
       <label className="grid gap-2 text-sm font-semibold text-[#3f372f] sm:max-w-48">
         Quantity
         <Input
+          id="platterQuantity"
+          name="platterQuantity"
           min={1}
           max={20}
           type="number"

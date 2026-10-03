@@ -82,6 +82,8 @@ export function LoginPanel({ initialRole = "customer" }: { initialRole?: Role })
           <label className="grid gap-2 text-sm font-semibold text-[#3f372f]">
             Email
             <Input
+              id="email"
+              name="email"
               type="email"
               autoComplete="email"
               value={email}
@@ -95,6 +97,8 @@ export function LoginPanel({ initialRole = "customer" }: { initialRole?: Role })
             <label className="grid gap-2 text-sm font-semibold text-[#3f372f]">
               Admin ID
               <Input
+                id="adminId"
+                name="adminId"
                 autoComplete="username"
                 value={adminId}
                 onChange={(event) => setAdminId(event.target.value)}
@@ -105,6 +109,8 @@ export function LoginPanel({ initialRole = "customer" }: { initialRole?: Role })
             <label className="grid gap-2 text-sm font-semibold text-[#3f372f]">
               Password
               <Input
+                id="password"
+                name="password"
                 type="password"
                 autoComplete="current-password"
                 value={password}
